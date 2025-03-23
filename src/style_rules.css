@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: 1px solid black;
+}
+
+body{
+    background-color: lightgray;
+    height: fit-content;
+}
+
+button{
+    transition: all 0.2s ease-out;
+}
+
+.nav_bar{
+    display: flex;
+    flex-grow: 1;
+    flex-flow: row wrap;
+    background-color: rgb(78, 164, 21);
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+    padding: 1.2em 1.5em;
+    border-bottom: 0.2em solid darkgreen;
+}
+
+.nav_item.search_bar{
+    padding: 0.2em 0em;
+    flex: 0.7;
+}
+
+.nav_item.session_button{
+    color:  white;
+    padding: 0.5em 0.87em;
+    border-radius: 0.2em;
+}
+
+.main.panel{
+    justify-content: space-evenly;
+    gap: 0;
+    padding: 0px 3vw;
+}
+.panel{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    gap: 0.8em;
+}
+
+.panel.row{
+    flex-direction: row;
+}
+
+.panel.column{
+    flex-direction: column;
+}
+
+.panel.item{
+    border: 0.15em solid black;
+    box-shadow: 0.2em 0.2em 0.5em darkslategrey;
+    align-items: flex-start;
+    border-radius: 0.2em;
+}
+
+.panel.f1{
+    flex: 1;
+}
+
+.panel.f2{
+    flex: 1;
+    flex-basis: 300px;
+}
+
+.nav_item.session_button.log_in{
+    border: 0.2em solid rgb(5, 24, 97);
+    background-color: rgb(10, 114, 219);
+    box-shadow: 0.2em 0.2em 0.3em rgb(2, 13, 72);
+}
+
+.nav_item.session_button.log_in:hover{
+    border: 0.2em solid rgb(10, 51, 122);
+    background-color: dodgerblue;
+    box-shadow: 0.2em 0.2em 0.3em rgb(5, 38, 88);
+}
+
+.nav_item.session_button.log_out{
+    border: 0.2em solid rgb(67, 2, 2);
+    background-color: rgb(207, 78, 9);
+    box-shadow: 0.2em 0.2em 0.3em rgb(32, 1, 1);
+}
+
+.nav_item.session_button.log_out:hover{
+    border: 0.2em solid rgb(97, 5, 5);
+    background-color: rgb(255, 109, 30);
+    box-shadow: 0.2em 0.2em 0.3em rgb(72, 2, 2);
+}
+
+.like_button{
+    background-color: lemonchiffon;
+    padding: 0.1em 0.5em;
+    border-radius: 0.3em;
+    border: 0.15em solid darkkhaki;
+    box-shadow: 0.2em 0.2em 0.3em rgba(69, 78, 0, 0.699);
+}
+
+.like_button:hover{
+    background-color: rgb(255, 201, 84);
+}
+
+.define_button{
+    color: white;
+    background-color: green;
+    border: 0.2em solid rgb(0, 58, 26);
+    border-radius: 0.2em;
+    padding: 0.3em;
+    width: 50%;
+    min-width: 6em;
+}
+
+.define_button:hover{
+    background-color: rgb(81, 183, 13);
+    border-color: rgb(23, 58, 0);
+}
