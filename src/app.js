@@ -6,15 +6,22 @@ var define_button;
 function addLikeEvent(element) {
     element.addEventListener("click",
         function () {
-            
-            // Like count
 
+            /*
+            // old like count
             let html = this.innerHTML;
             let num_index = html.search(/\d/i);
             html = html.slice(num_index);
             html = html.split(/\s/g);
             let like_count = Number(html[0]);
-            this.innerHTML = (++like_count) + " me gusta";
+            */
+
+            // Like count
+            // By using innerText we dont have to worry about formatting
+            let text = this.innerText;
+            text = text.split(/\s/g);
+            let like_count = Number(text[0]);
+            this.innerText = (++like_count) + " me gusta";
 
             // Alert
             //
@@ -23,7 +30,7 @@ function addLikeEvent(element) {
             // which is the one containing the animal's name.
             // The second option requires the parent of the button to be a form element,
             // which allow us to access it through the .form property, the rest is the same as the first option.
-            
+
             //let title = this.form.children[0].innerHTML;
             let title = this.parentNode.children[0].innerHTML;
 
@@ -53,12 +60,12 @@ function main() {
 
             this.classList.toggle("log_in");
             this.classList.toggle("log_out");
-    });
+        });
 
     define_button.addEventListener("click",
-    function(){
-        this.remove();
-    });
+        function () {
+            this.remove();
+        });
 }
 
 main();
